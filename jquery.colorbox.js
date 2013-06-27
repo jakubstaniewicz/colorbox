@@ -644,7 +644,9 @@
 				}
 
 				if (loadedCallback) {
-					loadedCallback();
+					if (typeof(loadedCallback) == 'function') {
+						loadedCallback();
+					}
 				}
 			},
 			step: function () {
